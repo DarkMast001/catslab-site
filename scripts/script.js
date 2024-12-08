@@ -4,7 +4,7 @@ const navLinks = document.querySelectorAll('.nav_link');
 
 const inputEquationMolar = document.querySelector('.input_equation_molar');
 const inputEquationBalance = document.querySelector('.input_equation_balance');
-const mediaQuery = window.matchMedia('(max-width: 700px)');
+const mediaQuery = window.matchMedia('(max-width: 460px)');
 
 menuIcon.addEventListener("click", () => {
 	navMenu.classList.toggle("show");
@@ -29,8 +29,7 @@ function updatePlaceholder(e) {
 			inputEquationMolar.setAttribute('placeholder', 'Введите соединение. Например, H20')
 	}
 }
-// Обновляем placeholder при загрузке страницы
+
 updatePlaceholder(mediaQuery);
-  
-// Отслеживаем изменения ширины окна
+
 mediaQuery.addEventListener('change', updatePlaceholder);
